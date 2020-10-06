@@ -3,7 +3,6 @@ package com.abenas.score.component;
 
 import com.abenas.score.vo.Highscore;
 import com.abenas.score.vo.Score;
-import com.abenas.score.vo.ScoreComparator;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -25,8 +24,7 @@ public class HighscoreComponent {
     }
 
     private void sort() {
-        ScoreComparator scoreComparator = new ScoreComparator();
-        scores.sort(scoreComparator);
+        scores.sort(Score::compareTo);
         scores.parallelStream().forEach(it -> {it.setPosition(scores.indexOf(it) + 1);});
     }
 

@@ -2,7 +2,7 @@ package com.abenas.score.vo;
 
 import java.util.Objects;
 
-public class Score {
+public class Score implements Comparable<Score> {
 
     private int userId;
     private int points;
@@ -46,6 +46,11 @@ public class Score {
     @Override
     public int hashCode() {
         return Objects.hash(userId);
+    }
+
+    @Override
+    public int compareTo(Score score) {
+        return Integer.compare((score.getPoints()), getPoints());
     }
 
 }

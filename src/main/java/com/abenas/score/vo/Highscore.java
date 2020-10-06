@@ -4,13 +4,14 @@ import java.util.List;
 
 public class Highscore {
 
-    private List<Score> highscores;
+    private final List<Score> highscores;
+
+    public Highscore(List<Score> scores) {
+        this.highscores = scores;
+    }
 
     public List<Score> getHighscores() {
         return highscores;
     }
 
-    public void setHighscores(List<Score> highscores) {
-        this.highscores = highscores;
-    }
 }

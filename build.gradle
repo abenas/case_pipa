@@ -1,6 +1,9 @@
+// apply plugin: ‘jacoco’
+
 plugins {
     id 'java'
     id 'application'
+    id 'jacoco'
 }
 
 group 'com.abenas'
@@ -12,8 +15,14 @@ repositories {
 
 dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web:2.3.4.RELEASE'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.+'
+    testImplementation "org.mockito:mockito-core:3.+"
 }
 
 application {
     mainClassName = 'com.abenas.score.ScoreApplication'
+}
+
+test {
+    useJUnitPlatform()
 }

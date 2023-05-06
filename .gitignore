@@ -7,5 +7,8 @@
 *.iml
 out
 gen
-/build/*
-.gradle
+.gradle/*
+.vscode
+/bin*
+/build*
+.idea/*

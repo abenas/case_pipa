@@ -19,7 +19,6 @@ public class ScoreServiceTest {
 
     private ScoreService scoreService;
     private HighscoreComponent highscoreComponent;
-    private Highscore x;
 
     @BeforeEach
     public void setUp() {
